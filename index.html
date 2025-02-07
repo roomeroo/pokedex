@@ -5,16 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
     <link rel="stylesheet" href="style.css">
-    <script defer href="script.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>Pokedex</h1>
+        <h1>P<img class="pokebola"src="Recursos/1068729.png" alt="">kedex</h1>
     </header>
     <nav>
         <ul>
-            <li> <button id="lupa"><img id="svg" src="Recursos/search-alt-svgrepo-com.svg" alt=""></button></li>
-            <li> <select name="Desplegable" id="desplegable"></select> </li>
+            <li>
+                <div id="container">
+                    <input id="buscador" type="text" placeholder="Buscar">
+                </div>
+            </li>
+            <li>
+                <select id="desplegable" name="categorias">
+                    <optgroup label="Categorías">
+                        <option value="Fuego">Fuego</option>
+                        <option value="Agua">Agua</option>
+                        <option value="Eléctrico">Eléctrico</option>
+                    </optgroup>
+                </select>
+
+            </li>
         </ul>
     </nav>
     <main>
