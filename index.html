@@ -15,20 +15,31 @@
 
         <nav>
             <ul>
-                <li> <div>
-                        <button id="lupa"><img id="svg" src="Recursos/search-alt-svgrepo-com.svg" alt="una lupa."></button>
+                <li>
+                    <div id="container">
+                        <input id="buscador" type="text" placeholder="Buscar">
                     </div>
                 </li>
-                <li> <select name="Desplegable" id="desplegable"></select> </li>
+                <li>
+                    <select id="desplegable" name="categorias">
+                        <optgroup label="Categorías">
+                            <option value="Fuego">Fuego</option>
+                            <option value="Agua">Agua</option>
+                            <option value="Eléctrico">Eléctrico</option>
+                        </optgroup>
+                    </select>
+    
+                </li>
             </ul>
         </nav>
 
-        <main id = "contenedorPokemon">  
-
+        <main>  
+            <div id = "contenedorPokemon"></div>
+            <button id = "boton" style="border: none; background: none;"><img id= "pokeball"  src="Recursos/Poké_Ball_icon.svg.png" alt=""></button>
         </main>
 
         <footer>
-            <button></button>
+            
         </footer>
     </body>
 </html>

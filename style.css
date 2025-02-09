@@ -33,17 +33,22 @@ nav ul {
     align-items: center;
 }
 
-#buscador{
-    height: 20px;
+#container{
+    height: 70px;
     width: 150px;
-    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
 }
-#lupa{
-    width: 50px;
+
+#buscador{
     height: 50px;
+    width: 50px;
+    background-color:black;
+    color: grey;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
     border-radius: 100%;
-    background-color: black;
-    box-shadow: 0px 0px 10px black;
+    padding-left: 5px;
+
 }
 
 #svg{
@@ -57,7 +62,7 @@ nav ul {
     border-radius: 10px;
 }
 
-main{
+#contenedorPokemon{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,18 +73,14 @@ main{
 }
 
 .pokemon{
-    background-color: lightgray;
+    background-color: rgba(0, 0, 0, 0.575);
     display: flex;
     flex-direction: column;
     text-align: center;
     border-radius: 10px;
-    height: 300px;
-    width: 190px;
-}
-
-img{
-    max-width: 300px;
-    margin: 0;
+    height: auto;
+    min-width: 20%;
+    color: rgb(255, 255, 255);
 }
 
 .contenedor{
@@ -87,11 +88,35 @@ img{
     flex-wrap: wrap;
 }
 
+.imagenPokemon{
+
+}
+
 .row{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#boton{
+    margin-top: 50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#pokeball{
+    height: 100px;
 }
 
 .type{
