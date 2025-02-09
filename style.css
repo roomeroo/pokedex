@@ -68,7 +68,7 @@ main{
 }
 
 .pokemon{
-    background-color: gray;
+    background-color: lightgray;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -85,4 +85,44 @@ img{
 .contenedor{
     display: flex;
     flex-wrap: wrap;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.type{
+    border-radius: 5px;
+    width: 60px;
+}
+
+.grass{
+    background-color: rgb(63, 184, 15);
+}
+
+.poison{
+    background-color: rgb(163, 16, 163);
+}
+
+.bug{
+    background-color: yellowgreen;
+}
+
+.fire{
+    background-color: orangered;
+}
+
+.flying{
+    background-color: lightskyblue;
+}
+
+.water{
+    background-color: rgb(0, 119, 255);
+}
+
+.normal{
+    background-color: gray;
 }
