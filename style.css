@@ -3,12 +3,16 @@
     src: url("recursos/fuentes/Pokemon Hollow.ttf") format("truetype");
 }
 
+select{
+    height: 50px;
+}
+
 body{
     height: 100%;
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-image: url(https://static.vecteezy.com/system/resources/previews/003/127/939/non_2x/abstract-white-and-grey-stripe-diagonal-lines-background-free-vector.jpg);
+    background-image: url(Recursos/body_bg.png), url(Recursos/container_bg.png);
 }
 
 .titulo {
@@ -18,7 +22,7 @@ header{
     display: flex;
     width: 100%;
     height: 150px;
-    color: black;
+    color: rgb(221, 221, 221);
     font-size: 50px;
     justify-content: center;
     align-items: center;
@@ -45,7 +49,7 @@ nav ul {
     width: 50px;
     background-color:black;
     color: grey;
-    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    box-shadow: 0px 0px 20px rgb(173, 173, 173);
     border-radius: 100%;
     padding-left: 5px;
 
@@ -75,6 +79,7 @@ nav ul {
 .pokemon{
     background-color: rgba(0, 0, 0, 0.575);
     display: flex;
+    box-shadow: 10px 10px 20px rgba(194, 194, 194, 0.5); /* Sombra */
     flex-direction: column;
     text-align: center;
     border-radius: 10px;
@@ -88,17 +93,13 @@ nav ul {
     flex-wrap: wrap;
 }
 
-.imagenPokemon{
-
-}
-
 .row{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     border-radius: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(218, 215, 215);
 }
 
 main{
@@ -122,6 +123,9 @@ main{
 .type{
     border-radius: 5px;
     width: 60px;
+    color: black;
+    font-weight: bold;
+    font-size: large;
 }
 
 .grass{
@@ -150,4 +154,52 @@ main{
 
 .normal{
     background-color: gray;
+}
+
+.electric{
+    background-color: yellow;
+}
+
+.ground{
+    background-color: rgb(167, 112, 30);
+}
+
+.fairy{
+    background-color: #fdb9e9;;
+}
+
+.fighting{
+    background-color:tomato
+}
+
+.psychic{
+    background-color:#f366b9;
+}
+
+.rock{
+    background-color: rgb(201, 176, 123);
+}
+
+.steel{
+    background-color:slategrey;
+}
+
+.ice{
+    background-color: rgb(0, 181, 241, 0.8);
+}
+
+.ghost{
+    background-color: #7b62a3;
+}
+
+.dragon{
+    background-color: #d6c2f7;
+}
+
+.dark{
+    background-color: #5304d3;
+}
+
+.stellar{
+    background: linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet);
 }
