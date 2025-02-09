@@ -1,11 +1,18 @@
+@font-face{
+    font-family: "Pokemon";
+    src: url("recursos/fuentes/Pokemon Hollow.ttf") format("truetype");
+}
+
 body{
-    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 0;
     background-image: url(https://static.vecteezy.com/system/resources/previews/003/127/939/non_2x/abstract-white-and-grey-stripe-diagonal-lines-background-free-vector.jpg);
+}
+
+.titulo {
+    text-shadow: 40px 20px 20px black;
 }
 header{
     display: flex;
@@ -15,6 +22,7 @@ header{
     font-size: 50px;
     justify-content: center;
     align-items: center;
+    font-family: "Pokemon", 'Franklin Gothic Medium';
 }
 nav ul {
     width: 100%;
@@ -24,10 +32,7 @@ nav ul {
     justify-content: space-around;
     align-items: center;
 }
-.pokebola{
-    height: 50px;
-    width: 50px;
-}
+
 #container{
     height: 70px;
     width: 150px;
@@ -39,20 +44,12 @@ nav ul {
     height: 50px;
     width: 50px;
     background-color:black;
-    color: black;
+    color: grey;
     box-shadow: 0px 0px 20px rgb(0, 0, 0);
     border-radius: 100%;
     padding-left: 5px;
 
 }
-
-#fondo{
-    background-color: black;
-    border-radius: 100%;
-    height: 50px;
-    width: 50px;
-}
-
 
 #svg{
     width: 25px;
@@ -60,8 +57,97 @@ nav ul {
 }
 
 #desplegable{
-    width: 160px;
-    height: 30px;
+    width: 150px;
+    height: 20px;
     border-radius: 10px;
-    padding-left: 5px;
+}
+
+#contenedorPokemon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.pokemon{
+    background-color: rgba(0, 0, 0, 0.575);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    height: auto;
+    min-width: 20%;
+    color: rgb(255, 255, 255);
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imagenPokemon{
+
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#boton{
+    margin-top: 50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#pokeball{
+    height: 100px;
+}
+
+.type{
+    border-radius: 5px;
+    width: 60px;
+}
+
+.grass{
+    background-color: rgb(63, 184, 15);
+}
+
+.poison{
+    background-color: rgb(163, 16, 163);
+}
+
+.bug{
+    background-color: yellowgreen;
+}
+
+.fire{
+    background-color: orangered;
+}
+
+.flying{
+    background-color: lightskyblue;
+}
+
+.water{
+    background-color: rgb(0, 119, 255);
+}
+
+.normal{
+    background-color: gray;
 }

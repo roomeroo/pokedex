@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <header>
-        <h1>P<img class="pokebola"src="Recursos/1068729.png" alt="">kedex</h1>
-    </header>
-    <nav>
-        <ul>
-            <li>
-                <div id="container">
-                    <input id="buscador" type="text" placeholder="Buscar">
-                </div>
-            </li>
-            <li>
-                <select id="desplegable" name="categorias">
-                    <optgroup label="Categorías">
-                        <option value="Fuego">Fuego</option>
-                        <option value="Agua">Agua</option>
-                        <option value="Eléctrico">Eléctrico</option>
-                    </optgroup>
-                </select>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokedex</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src = "script.js"></Script>
+    </head>
 
-            </li>
-        </ul>
-    </nav>
-    <main>
+    <body>
+        <header>
+            <h1 class = "titulo">Pokedex</h1>
+        </header>
 
-    </main>
+        <nav>
+            <ul>
+                <li>
+                    <div id="container">
+                        <input id="buscador" type="text" placeholder="Buscar">
+                    </div>
+                </li>
+                <li>
+                    <select id="desplegable" name="categorias">
+                        <optgroup label="Categorías">
+                            <option value="Fuego">Fuego</option>
+                            <option value="Agua">Agua</option>
+                            <option value="Eléctrico">Eléctrico</option>
+                        </optgroup>
+                    </select>
+    
+                </li>
+            </ul>
+        </nav>
 
-    <footer>
-    </footer>
-</body>
+        <main>  
+            <div id = "contenedorPokemon"></div>
+            <button id = "boton" style="border: none; background: none;"><img id= "pokeball"  src="Recursos/Poké_Ball_icon.svg.png" alt=""></button>
+        </main>
+
+        <footer>
+            
+        </footer>
+    </body>
 </html>
