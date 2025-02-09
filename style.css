@@ -1,11 +1,18 @@
+@font-face{
+    font-family: "Pokemon";
+    src: url("recursos/fuentes/Pokemon Hollow.ttf") format("truetype");
+}
+
 body{
-    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 0;
     background-image: url(https://static.vecteezy.com/system/resources/previews/003/127/939/non_2x/abstract-white-and-grey-stripe-diagonal-lines-background-free-vector.jpg);
+}
+
+.titulo {
+    text-shadow: 40px 20px 20px black;
 }
 header{
     display: flex;
@@ -15,6 +22,7 @@ header{
     font-size: 50px;
     justify-content: center;
     align-items: center;
+    font-family: "Pokemon", 'Franklin Gothic Medium';
 }
 nav ul {
     width: 100%;
@@ -47,4 +55,34 @@ nav ul {
     width: 150px;
     height: 20px;
     border-radius: 10px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.pokemon{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    height: 300px;
+    width: 190px;
+}
+
+img{
+    max-width: 300px;
+    margin: 0;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
 }
