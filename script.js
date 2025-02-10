@@ -3,6 +3,7 @@ let numeroPag;
 let buscador = document.getElementById("buscador");
 let numeroVentana = 0;
 let boton = document.getElementById("boton");
+let miSelect = document.getElementById("desplegable");
 
 
 buscador.addEventListener("click", ()=>{
@@ -108,3 +109,17 @@ function imagenTipo(){
 }
 
 imagenTipo();
+
+miSelect.addEventListener("click", ()=>{
+    const valor = miSelect.value;
+    const pokemons = document.querySelectorAll(".pokemon")
+    pokemons.forEach(pokemon => {
+        const tipo = Array.from(pokemon.querySelectorAll(".type")).map(p => p.textContent.toLowerCase());
+        if(valor==="todos" || tipo.includes(valor))
+            pokemon.style.display = "block";
+        else{
+            pokemon.style.display = "none";
+        }
+    })
+
+})
