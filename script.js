@@ -76,7 +76,7 @@ buscador.addEventListener("keyup", e =>{
     pokemons.forEach(pokemon =>{
         const nombre = pokemon.querySelector("h2").textContent.toLowerCase();
         if(nombre.includes(busqueda)){
-            pokemon.style.display = "block"; // se muestra
+            pokemon.style.display = "flex"; // se muestra
         }else
             pokemon.style.display = "none"; // no se muestra
     })
@@ -110,13 +110,13 @@ function imagenTipo(){
 
 imagenTipo();
 
-miSelect.addEventListener("click", ()=>{
+miSelect.addEventListener("change", ()=>{
     const valor = miSelect.value;
     const pokemons = document.querySelectorAll(".pokemon")
     pokemons.forEach(pokemon => {
         const tipo = Array.from(pokemon.querySelectorAll(".type")).map(p => p.textContent.toLowerCase());
         if(valor==="todos" || tipo.includes(valor))
-            pokemon.style.display = "block";
+            pokemon.style.display = "flex";
         else{
             pokemon.style.display = "none";
         }

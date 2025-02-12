@@ -89,8 +89,8 @@ nav{
     flex-direction: column;
     text-align: center;
     border-radius: 10px;
-    height: auto;
-    min-width: 20%;
+    height: 44vh;
+    width: 30vh;
     color: rgb(255, 255, 255);
     margin-left: 20px;
     margin-bottom: 20px;
