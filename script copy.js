@@ -1,28 +1,34 @@
 let contenedoresDiv = document.getElementById("contenedorPokemon");
 let desplegable = document.getElementById("desplegable");
 let buscador = document.getElementById("buscador");
-let pokemons =[];
-let numeroPagina=0;
-let limitePagina=40;
+let pokemons = [];
+let numeroPagina = 0;
+let limitePagina = 40;
 
-function comprobarFiltros()
-{
-    if(buscador.value == "" && desplegable.value =="todos"){
+async function comprobarFiltros(){
+    /*if(buscador.value === "" && desplegable.value === "todos"){
         return pokemons;
-    }
-    
+    }*/
     let aux = [];
-    pokemons.forEach(pokemon => {
-        if(pokemon.name.startsWith(buscador.value) && pokemon.type==desplegable.value){
-            aux.push(pokemon);
-        }
-    });
+    Promise.all(pokemons.forEach(unidad => {
+        fetch(unidad.url)
+            .then(response => response.json())
+            .then(detalles =>{
+                let nombre = detalles.name;
+                let tipos = detalles.types;
+                Promise.all(pokemons.forEach(pokemon => {
+                    if(nombre.includes(buscador.value) && tipos.includes(desplegable.value)){
+                        aux.push(pokemon);
+                    }
+                }));
+            })
+    }))
 
     return aux;
 }
 
 async function crearContenedores(){
-    let pokemonsFinal = comprobarFiltros();
+    let pokemonsFiltrados = await comprobarFiltros();
 
     for(let i = (numeroPagina * limitePagina); i < 40 + (numeroPagina * limitePagina); i++){
         let contenedor = document.createElement("div")
@@ -31,14 +37,12 @@ async function crearContenedores(){
         letras.classList.add("contTipo")
         let nombre = document.createElement("h2");
         let imagen = document.createElement("img");
-
-        nombre.textContent = pokemons[i].name;
+        console.log(pokemonsFiltrados[i])
+        nombre.textContent = pokemonsFiltrados[i].name;
         contenedor.appendChild(imagen)
         contenedor.appendChild(nombre);
         contenedor.appendChild(letras);
-        contenedoresDiv.appendChild(contenedor)
-
-        fetch(pokemons[i].url)
+        fetch(pokemonsFiltrados[i].url)
         .then(response => response.json())
         .then(pokemonDetails => {
             imagen.src = pokemonDetails.sprites.front_default;
@@ -48,16 +52,14 @@ async function crearContenedores(){
                 p.classList.add(type.type.name);
                 p.classList.add("type");
                 letras.appendChild(p);
-                //console.log(type)    Ayuda para buscar la imagen de los tipos
             });
         });
-        
     }
 }
 
 async function cogerPokemons() {
     try {
-        const respuesta = await fetch ('https://pokeapi.co/api/v2/pokemon?limit=10000')
+        const respuesta = await fetch('https://pokeapi.co/api/v2/pokemon?limit=10000')
         const data = await respuesta.json();
         pokemons = data.results;
         crearContenedores();
