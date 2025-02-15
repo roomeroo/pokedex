@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pokedex</title>
-        <link rel="stylesheet" href="CSS/style.css">
-        <script defer src = "JS/script copy.js"></Script>
-    </head>
-
-    <body>
-        <header>
-            <h1 class = "titulo">Pokedex</h1>
-        </header>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script defer src="JS/script.js"></script>
+</head>
+<body>
+    <header class="titulo"><h1>Pokedex</h1></header>
         <nav>
             <ul>
                 <li>
@@ -47,14 +43,13 @@
     
                 </li>
             </ul>
-        </nav>
-
-        <main>  
+        </nav> 
+        <main>
+            <div id="cargando" class ="cargadorContenedor" style="display: none;">
+                <img id = "cargando" src="Recursos/cargador.gif" alt="Cargando...">
+            </div>  
             <div id = "contenedorPokemon"></div>
+            <button id = "boton" style="border: none; background: none;"><img id= "pokeball"  src="Recursos/Poké_Ball_icon.svg.png" alt=""></button>
         </main>
-
-        <footer>
-            
-        </footer>
-    </body>
+</body>
 </html>
