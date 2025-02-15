@@ -1,6 +1,5 @@
 let galeria = document.getElementById("contenedorPokemon");
 let buscador = document.getElementById("buscador");
-let boton = document.getElementById("boton");
 let miSelect = document.getElementById("desplegable");
 
 
@@ -73,7 +72,7 @@ buscador.addEventListener("keyup", e =>{
 
     pokemons.forEach(pokemon =>{
         const nombre = pokemon.querySelector("h2").textContent.toLowerCase();
-        if(nombre.includes(busqueda)){
+        if(nombre.startsWith(busqueda)){
             pokemon.style.display = "flex"; // se muestra
         }else
             pokemon.style.display = "none"; // no se muestra
@@ -101,5 +100,9 @@ miSelect.addEventListener("change", ()=>{
             pokemon.style.display = "none";
         }
     })
+
+})
+
+galeria.addEventListener("click",()=>{
 
 })
