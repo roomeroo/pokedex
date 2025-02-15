@@ -7,7 +7,7 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-image: url(../Recursos/body_bg.png), url(../Recursos/container_bg.png);
+    background-image: url(../Recursos/fondo1.jpg);
 }
 
 header{
@@ -51,7 +51,7 @@ main{
 }
 
 .pokemon{
-    background-color: rgba(0, 0, 0, 0.575);
+    background: radial-gradient(circle, #4b79a1, #283e51, #0a1c29);
     display: flex;
     box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra */
     flex-direction: column;
@@ -83,6 +83,7 @@ main{
     gap: 20px;
     border-radius: 10px;
     background-color: rgb(218, 215, 215);
+    height: 30px;
 }
 
 #buscador{

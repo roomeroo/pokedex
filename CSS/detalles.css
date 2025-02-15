@@ -12,6 +12,7 @@ body{
     background-image: url("../Recursos/126090.jpg");
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
 }
 
@@ -51,8 +52,8 @@ main{
     position: relative;
 }
 .maquina{
-    height: 800px;
-    width: 500px;
+    height: 900px;
+    width: 600px;
     position: absolute;
 }
 
@@ -70,12 +71,16 @@ main{
 #imagen{
     height: 400px;
     width: 400px;
-    transform: translate(0%, 25%);
+    position: relative;
+    top: 120px;
+    left: 50px;
 }
 
 #nombre{
-    transform: translate(0%, 300%);
-    font-size: 35px;
+    position: relative;
+    top: 160px;
+    left: 50px;
+    font-size: 45px;
     font-family:'Pokedex';
 }
 
@@ -97,4 +102,12 @@ main{
     height: 300px;
     width: 300px;
     position: absolute;
+}
+
+#gif{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: -30px;
+    left:-140px;
 }

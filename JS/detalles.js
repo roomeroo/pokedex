@@ -1,7 +1,7 @@
 let abierta = document.getElementById("abierta");
 let cerrada = document.getElementById("cerrada");
 let titulo = document.getElementById("titulo");
-
+let gif = document.getElementById("gif");
 
 async function obtenerPokemon() {
     // Obtener el nombre del Pokémon de la URL
@@ -18,10 +18,13 @@ async function obtenerPokemon() {
         const pokemon = await response.json();
 
         // Insertar los datos en el HTML
+        const response2 = await fetch(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${pokemon.id}.gif`);
         document.getElementById("nombre").textContent = pokemon.name.toUpperCase();
-        document.getElementById("imagen").src = pokemon.sprites.front_default;
+        document.getElementById("nombre").classList.add("marginTop");
+        document.getElementById("imagen").src = pokemon.sprites.other.dream_world.front_default;
         document.getElementById("favicon").setAttribute("href", pokemon.sprites.front_default);
         document.getElementById("favicon").setAttribute("sizes", "256x256");
+        gif.src = response2.url;
         const tipos = document.getElementById("tipos");
         /*pokemon.types.forEach(type => {
             let p = document.createElement("p");
@@ -34,6 +37,7 @@ async function obtenerPokemon() {
             console.log("abriendose");
             mostrarPokeballAbierta()
         });
+        
 
     } catch (error) {
         console.error("Error al obtener los datos del Pokémon:", error);
@@ -55,3 +59,8 @@ function mostrarPokeballAbierta() {
 
 // Llamar a la función cuando cargue la página
 obtenerPokemon();
+async function recogerGif(){
+    const response = await fetch(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${pokemon.id}.gif`);
+    const data = await response.json();
+    console.log(data);
+}
