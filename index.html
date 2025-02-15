@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script copy.js"></script>
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script defer src="JS/script.js"></script>
 </head>
 <body>
     <header class="titulo">Pokedex</header>
@@ -44,7 +44,10 @@
                 </li>
             </ul>
         </nav> 
-        <main>  
+        <main>
+            <div id="cargando" class ="cargadorContenedor" style="display: none;">
+                <img id = "cargando" src="Recursos/cargador.gif" alt="Cargando...">
+            </div>  
             <div id = "contenedorPokemon"></div>
             <button id = "boton" style="border: none; background: none;"><img id= "pokeball"  src="Recursos/Poké_Ball_icon.svg.png" alt=""></button>
         </main>

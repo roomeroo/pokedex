@@ -7,7 +7,7 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-image: url(Recursos/body_bg.png), url(Recursos/container_bg.png);
+    background-image: url(../Recursos/body_bg.png), url(../Recursos/container_bg.png);
 }
 
 header{
@@ -103,7 +103,12 @@ main{
     padding-left: 5px;
 }
 
-
+.cargadorContenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 780px;
+}
 
 
 
@@ -200,4 +205,8 @@ main{
 
 .stellar{
     background: linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet);
+}
+
+*{
+    text-decoration: none;
 }
