@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Pokemon";
+    src: url("recursos/fuentes/Pokemon Hollow.ttf") format("truetype");
+}
+
 select{
     height: 50px;
 }
@@ -210,4 +215,9 @@ main{
 
 *{
     text-decoration: none;
+}
+
+.titulo{
+    font-size: 100px;
+    font-family: "Pokemon";
 }
