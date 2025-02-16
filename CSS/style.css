@@ -116,7 +116,7 @@ main{
     justify-content: center;
     align-items: center;
     margin-left: -20%;
-    animation: moverDerecha 2.5s; /* Animación que se repite indefinidamente */
+    animation: moverDerecha 3s; /* Animación que se repite indefinidamente */
 }
 
 @keyframes moverDerecha {
