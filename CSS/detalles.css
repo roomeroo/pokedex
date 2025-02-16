@@ -1,0 +1,264 @@
+@font-face{
+    font-family: "Pokedex";
+    src: url("../recursos/fuentes/Geostar-Regular.ttf") format("truetype");
+}
+@font-face{
+    font-family: "Pokemon";
+    src: url("../recursos/fuentes/Pokemon Hollow.ttf") format("truetype");
+}
+
+
+body{
+    background-image: url("../Recursos/pokemon-espada_325107.jpg");
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-attachment: fixed;
+    background-size: cover; 
+    
+}
+
+header{
+    display: flex;
+    width: auto;
+    height: 100px;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Pokemon", 'Franklin Gothic Medium';
+    text-shadow: 40px 20px 20px black;
+}
+
+.titulo{
+    margin-top: 40px;
+    text-decoration: none;
+    color: white;
+}
+
+main{
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: 800px 1fr;
+    gap: 100px;
+}
+
+.columnaIzquierda{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 900px;  
+}
+.imagen{
+    height: 800px;
+    width: 500px;
+    position: relative;
+}
+.maquina{
+    height: 900px;
+    width: 600px;
+}
+
+.pokemonVisual{
+    z-index: 2;
+    height: 800px;
+    width: 500px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#imagen{
+    height: 350px;
+    width: 350px;
+    position: relative;
+    transform: translate(25%, 40%);
+}
+
+
+#gif{
+    height: 90px;
+    width: 90px;
+    position: relative;
+    transform: translate(-165%, -50%);
+}
+
+#nombre{
+    position: relative;
+    transform: translate(15%, 370%);
+    font-size: 45px;
+    font-family:'Pokedex';
+}
+
+.descripcion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    width: 600px;
+}
+
+.descripcion p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    font-size: 25px;
+}
+
+#indice{
+    height: 900px;
+    width: 600px;
+}
+
+#abierta{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.columnaDerecha{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contenedorGenerico{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    background-color: rgb(224, 255, 255, 0.6);
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 90%;
+    font-size: 16px;
+}
+
+p{
+    font-size: 18px;
+}
+
+.titulos{
+    background-color: hsl(180, 100%, 94%, 0.6);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.flecha{
+    height: 50px;
+}
+
+.grass{
+    background-color: rgb(63, 184, 15);
+}
+
+.poison{
+    background-color: rgb(163, 16, 163);
+}
+
+.bug{
+    background-color: yellowgreen;
+}
+
+.fire{
+    background-color: orangered;
+}
+
+.flying{
+    background-color: lightskyblue;
+}
+
+.water{
+    background-color: rgb(0, 119, 255);
+}
+
+.normal{
+    background-color: gray;
+}
+
+.electric{
+    background-color: yellow;
+}
+
+.ground{
+    background-color: rgb(167, 112, 30);
+}
+
+.fairy{
+    background-color: #fdb9e9;;
+}
+
+.fighting{
+    background-color:tomato
+}
+
+.psychic{
+    background-color:#f366b9;
+}
+
+.rock{
+    background-color: rgb(201, 176, 123);
+}
+
+.steel{
+    background-color:slategrey;
+}
+
+.ice{
+    background-color: rgb(0, 181, 241, 0.8);
+}
+
+.ghost{
+    background-color: #7b62a3;
+}
+
+.dragon{
+    background-color: #d6c2f7;
+}
+
+.dark{
+    background-color: #5304d3;
+}
+
+.stellar{
+    background: linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet);
+}
+
+.type{
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+}
+
+.flechaIzqda{
+    cursor:pointer;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+}
+
+.flechaDcha{
+    cursor:pointer;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 50%;
+    right: 0;
+}

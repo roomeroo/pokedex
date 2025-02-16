@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id = "titulo">Detalles</title>
+    <script defer src="JS/detalles.js"></script>
+    <link rel="stylesheet" href="CSS/detalles.css">
+    <link rel = "icon" href = "" type = "image/png" id = "favicon">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="titulo" ><h1>Pokedex</h1></a>
+    </header>
+    <main>
+        <section class = "columnaIzquierda">
+            <div class="maquina">
+                <div class="pokemonVisual">
+                    <img id="gif" src="">
+                    <img id="imagen" src="" alt="Imagen del Pokémon">
+                    <h1 id="nombre"></h1>
+                </div>
+                <img class="maquina" src="Recursos/e65f4a73e2a09c6ef3661d1197587f57.jpg" alt="Pokedex">
+            </div>
+        </section>
+
+        <section class="columnaDerecha">
+            <h1 class = "titulos">Descripción:</h1>
+            <div id = "descripcion" class = "contenedorGenerico">
+            </div>
+            <h1 class = "titulos">Tipos:</h1>
+            <div id = "contenedorTipos" class = "contenedorGenerico "></div>
+            <h1 class = "titulos">Debilidades:</h1>
+            <div id = "contenedorDebilidades" class = "contenedorGenerico "></div>
+            <h1 class = "titulos">Cadena evolutiva:</h1>
+            <div id = "contenedorEvolucion" class = "contenedorGenerico "></div>
+        </section>
+        <img src = "Recursos/izquierda.svg" id = "anterior" class="flechaIzqda"></img>
+        <img src = "Recursos/derecha.svg" id = "posterior" class="flechaDcha"></img>
+    </main>
+</body>
+</html>

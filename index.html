@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script defer src="JS/script.js"></script>
+</head>
+<body>
+    <header class="titulo"><h1>Pokedex</h1></header>
+        <nav>
+            <ul>
+                <li>
+                    <div id="container">
+                        <input id="buscador" type="text" placeholder="Buscar">
+                    </div>
+                </li>
+                <li>
+                    <select id ="desplegable" name="categorias">
+                        <option value="todos">Todos</option>
+                        <optgroup label="Categorías">
+                            <option value="fire">Fuego</option>
+                            <option value="water">Agua</option>
+                            <option value="electric">Eléctrico</option>
+                            <option value="grass">Planta</option>
+                            <option value="normal">Normal</option>
+                            <option value="psychic">Psíquico</option>
+                            <option value="fighting">Lucha</option>
+                            <option value="ground">Tierra</option>
+                            <option value="rock">Roca</option>
+                            <option value="flying">Volador</option>
+                            <option value="bug">Bicho</option>
+                            <option value="poison">Veneno</option>
+                            <option value="dark">Siniestro</option>
+                            <option value="ghost">Fantasma</option>
+                            <option value="ice">Hielo</option>
+                            <option value="steel">Acero</option>
+                            <option value="dragon">Dragon</option>
+                            <option value="fairy">Hada</option>
+                        </optgroup>
+                    </select>
+    
+                </li>
+            </ul>
+        </nav> 
+        <main>
+            <div id="cargando" class ="cargadorContenedor" style="display: none;">
+                <img id = "cargando" src="Recursos/cargador.gif" alt="Cargando...">
+            </div>  
+            <div id = "contenedorPokemon"></div>
+            <button id = "boton" style="border: none; background: none;"><img id= "pokeball"  src="Recursos/Poké_Ball_icon.svg.png" alt=""></button>
+        </main>
+</body>
+</html>
