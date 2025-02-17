@@ -1,10 +1,10 @@
 @font-face{
     font-family: "Pokedex";
-    src: url("../recursos/fuentes/Geostar-Regular.ttf") format("truetype");
+    src: url("../Recursos/fuentes/Geostar-Regular.ttf") format("truetype");
 }
 @font-face{
     font-family: "Pokemon";
-    src: url("../recursos/fuentes/Pokemon Hollow.ttf") format("truetype");
+    src: url("../Recursos/fuentes/Pokemon Hollow.ttf") format("truetype");
 }
 
 

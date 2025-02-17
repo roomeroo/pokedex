@@ -1,6 +1,6 @@
 @font-face{
     font-family: "Pokemon";
-    src: url("../recursos/fuentes/Pokemon Hollow.ttf") format("truetype");
+    src: url("../Recursos/fuentes/Pokemon Hollow.ttf") format("truetype");
 }
 
 select{
@@ -69,6 +69,11 @@ main{
     margin-left: 20px;
     margin-bottom: 20px;
 
+}
+
+.pokemon:hover{
+    transform: scale(1.2);
+    box-shadow: 0px 0px 60px rgb(255, 0, 255);
 }
 
 #boton{
