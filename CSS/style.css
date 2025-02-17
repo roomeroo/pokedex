@@ -71,6 +71,11 @@ main{
 
 }
 
+.pokemon:hover{
+    transform: scale(1.2);
+    box-shadow: 0px 0px 60px rgb(255, 0, 255);
+}
+
 #boton{
     margin-top: 50px;
     display: flex;
