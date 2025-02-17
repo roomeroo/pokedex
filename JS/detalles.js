@@ -155,7 +155,6 @@ async function mostrarDebilidadesPokemon() {
                 debilidadDiv.classList.add("type");
                 debilidadDiv.textContent = nombreDebilidadEspañol ? nombreDebilidadEspañol.name : debilidad.name;
 
-                // Asumiendo que ya existe un contenedor en el HTML con la id "contenedorDebilidades"
                 document.getElementById("contenedorDebilidades").appendChild(debilidadDiv);
             }
         }
@@ -181,11 +180,11 @@ async function mostrarEvolucionPokemon() {
         contenedorEvolucion.innerHTML = "";
 
         let cadenaEvolutiva = datosEvolucion.chain;
-        let evoluciones = [cadenaEvolutiva];
+        let evoluciones = [];
 
-        while (cadenaEvolutiva.evolves_to.length > 0) {
-            cadenaEvolutiva = cadenaEvolutiva.evolves_to[0];
+        while (cadenaEvolutiva) {
             evoluciones.push(cadenaEvolutiva);
+            cadenaEvolutiva = cadenaEvolutiva.evolves_to.length > 0 ? cadenaEvolutiva.evolves_to[0] : null;
         }
 
         for (let i = 0; i < evoluciones.length; i++) {
@@ -203,20 +202,18 @@ async function mostrarEvolucionPokemon() {
             imagenEvolucion.style.borderRadius = "50%";
             imagenEvolucion.style.border = "3px solid #000";
             imagenEvolucion.style.objectFit = "cover";
-
             imagenEvolucion.style.cursor = "pointer";
+
             imagenEvolucion.addEventListener("click", () => {
-                if (i < evoluciones.length - 1) {
-                    window.location.href = `detalles.html?pokemon=${evoluciones[i + 1].species.name}`;
-                } else if (i > 0) {
-                    window.location.href = `detalles.html?pokemon=${evoluciones[i - 1].species.name}`;
-                }
+                window.location.href = `detalles.html?pokemon=${evolucion.species.name}`;
             });
+
             const nombreEvolucion = document.createElement("p");
             nombreEvolucion.textContent = evolucion.species.name.charAt(0).toUpperCase() + evolucion.species.name.slice(1);
 
             const numeroPokedex = document.createElement("p");
             numeroPokedex.textContent = `#${idEvolucion}`;
+
             const respuestaTipos = await fetch(`https://pokeapi.co/api/v2/pokemon/${evolucion.species.name}`);
             const datosTipos = await respuestaTipos.json();
 
@@ -242,11 +239,11 @@ async function mostrarEvolucionPokemon() {
                 contenedorEvolucion.appendChild(flecha);
             }
         }
-
     } catch (error) {
         console.error("Error al obtener los datos de la evolución del Pokémon:", error);
     }
 }
+
 
 
 
